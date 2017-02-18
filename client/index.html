@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/public/css/materialize.min.css">
+  <title>Todo List</title>
+</head>
+<body>
+
+  <div id="modalmodalan" class="modal">
+  <div class="modal-content">
+    <h3>Update</h3>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+        <div class="input-field col s6">
+          <input id="todoupdate" name="todoupdate" type="text" class="validate">
+          <label class="active" for="todoupdate"></label>
+        </div>
+      </div>
+      </form>
+      <a href="#!" id="updatetodo" class="waves-effect waves-light btn modal-close " onclick="updateTodos()">submit</a>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+  </div>
+</div>
+
+<div id="modalmodalan2" class="modal">
+<div class="modal-content">
+  <h3>are you sure want to delete this activity from todo list??</h3>
+  <div class="row">
+    <a href="#modalmodalan3" id="yesdelete" class="waves-effect waves-light btn modal-close " onclick="deletePost()">YES</a>
+    <a href="#!" id="nodelete" class="waves-effect waves-light btn modal-close ">NO</a>
+  </div>
+</div>
+</div>
+
+<div id="modalmodalan3" class="modal">
+<div class="modal-content">
+  <h3 id="titleDelete"></h3>
+  <div class="row">
+    <a href="#!" id="yesdelete" class="waves-effect waves-light btn modal-close " onclick="ok()">OK</a>
+  </div>
+</div>
+</div>
+
+  <div class="container">
+
+  <div class="row">
+    <h3>Add new Todo:</h3>
+    <input id="idUpdate" type="hidden">
+
+    <form class="col s12">
+      <div class="row">
+      <div class="input-field col s6">
+        <input id="newtodo" name="newtodo" type="text" class="validate">
+        <label class="active" for="newtodo">What To do today?</label>
+      </div>
+    </div>
+    </form>
+
+    <a class="waves-effect waves-light btn" name="newtod" onclick="createTodo()">submit</a>
+  </div>
+
+  <div class="row">
+    <h3>Your Todo List: </h3>
+    <div id="todos" class="row">
+
+    </div>
+  </div>
+
+  <div id="formMemo" class="row">
+
+  </div>
+
+  </div>
+</body>
+<script type="text/javascript" src="/public/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="/public/js/materialize.min.js"></script>
+<script type="text/javascript" src="/public/js/ajax.js"></script>
+</html>
